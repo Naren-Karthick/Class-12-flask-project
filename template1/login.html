@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body bgcolor=lightblue>
+    <style>
+        
+        .login p{
+            margin-top: 100px;
+            display: block;
+            text-align: center;
+            font-size: 50px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 75px;
+            font-style: italic;
+            
+        }
+        .login input[type=text]{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            width: 350px;
+            height: 30px;
+            text-align: center;
+            margin-left: 37%;
+            font-size: 20px;
+                        
+        }
+        .login input[type=password]{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 350px;
+            height: 30px;
+            text-align: center;
+            margin-left: 37%;
+            font-size: 20px;
+
+        }
+        .login input[type=submit]{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 44%;
+            width: 150px;
+            height: 40px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+        }
+        .helpbutton{
+            position: absolute;
+            top: 20px;
+            margin-top: 3px;
+            float: left;
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+            font-size: 40px;
+            overflow: hidden;
+            height: 40px;
+            padding: 20px 20px;
+            left: -100px;
+            transition: 0.3s;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+            
+
+        }
+        .helpbutton:hover{
+            left: 0px;
+            cursor: pointer;
+            background-color: rgb(109, 109, 236);
+        }
+        svg{
+            margin-left: 10px;
+            
+            
+        }
+        
+        
+    </style>
+    <div class="login">
+        <p>Login</p>
+        <form action="/dashboard" method="post">
+            <input type="text" name='id' class="id" placeholder="Enter your ID" autofocus tabindex="1">
+            <br>
+            <input type="password" name="pass" placeholder="Enter your password" tabindex="1">
+            <br>
+            <input type="submit" enter="submit">
+        </form>
+        <a href="#" class="helpbutton">Help <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed"><path d="m515-80-10-110h-40q-143 0-244-101T120-535q0-143 101.5-244T467-880q71 0 131.5 25.5T704-783q45 46 70.5 108.5T800-538q0 66-19.5 132T724-280q-37 60-90 111T515-80Zm50-108q82-69 128.5-162.5T740-538q0-124-77.5-203T467-820q-120 0-203.5 83.5T180-535q0 118 83.5 201.5T465-250h100v62Zm-98-115q16 0 27-11t11-27q0-16-11-27t-27-11q-16 0-27 11t-11 27q0 16 11 27t27 11Zm-27-136h50q0-25 8.5-41.5T534-524q27-27 38-49.5t11-48.5q0-45-30.5-74T471-725q-42 0-75 22t-49 60l46 19q11-26 30.5-38.5T468-675q30 0 47 14.5t17 38.5q0 19-11 38.5T482-535q-27 28-34.5 45t-7.5 51Zm20-65Z"/></svg></a>
+    </div>
+</body>
+</html>

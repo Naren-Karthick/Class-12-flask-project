@@ -32,17 +32,17 @@ def dashboard():
         id = request.form.get('id')
         password = request.form.get('pass')
         if id and password:
-            if id=='admin' and password=='admin':
+            if id.lower()=='admin' and password.lower()=='admin':
                 return render_template('admin.html')
             elif id in tids:
                 tpassindex = tids.index(id)
-                if password == tpass[tpassindex]:
+                if password.lower() == tpass[tpassindex]:
                     return render_template('teacher.html')
                 else:
                     return "<h1 style='text-align:center'>Invalid password </h1>"
             elif id in sids:
                 spassindex = sids.index(id)
-                if password == spass[spassindex]:
+                if password.lower() == spass[spassindex]:
                     return render_template('student.html')
                 else:
                     return "<h1 style='text-align:center'>Invalid password </h1>"
@@ -51,6 +51,9 @@ def dashboard():
         else:
             return "<h1 style='text-align:center'>Id or Password is not entered </h1>"
 
+@app.route('/studentdata')
+def studentdata():
+    return render_template('admin_studentdata.html')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',debug=True)

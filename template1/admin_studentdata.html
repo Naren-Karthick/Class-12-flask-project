@@ -5,7 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Data</title>
 </head>
-<body>
+<style>
+    p{
+        text-align: center;
+        font-size: 50px;
+    }
+    table,th,td{
+        border: 1px solid black;
+        margin-left: 10%;
+        margin-top:100px;
+        table-layout: auto;
+    }
+    td{
+        padding: 7px 55px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .forstart{
+        color: transparent;
+    }
+    .forend{
+        color: transparent;
+    }
+    @media screen and (max-width:450px){
+        table,th,td{
+            border: 1px solid black;
+            margin-left: 2%;
+            margin-top: 30%;
+        }
+        td{
+            padding: 5px 10px;
+            font-size: 10px;
+            text-align: center;
+        }
+        p{
+            font-size: xx-large;
+        }
+
+    }
     
+</style>
+<body>
+    <div class="biodata"></div>
+        <p>Student Data</p>
+        <table >
+                <tr>
+                    <td>Student ID</td>
+                    <td>Name</td>
+                    <td>Class</td>
+                    <td>Dob</td>
+                    <td>Fname</td>
+                    <td>Mname</td>
+                </tr>
+            
+            <div class="forstart">{% for i in data %}</div>
+            <tr>
+                <td>{{i[0]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+                <td>{{i[4]}}</td>
+                <td>{{i[5]}}</td>
+                <td>{{i[6]}}</td>         
+            </tr>
+            <div class="forend">
+            {% endfor%}
+            </div>
+        </table>
+    </div>
 </body>
 </html>

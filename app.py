@@ -51,9 +51,20 @@ def dashboard():
         else:
             return "<h1 style='text-align:center'>Id or Password is not entered </h1>"
 
-@app.route('/studentdata')
+@app.route("/studentdata")
 def studentdata():
-    return render_template('admin_studentdata.html')
+    q = "select * from studentbio"
+    cur.execute(q)
+    data = cur.fetchall()
+    return render_template("admin_studentdata.html", data=data)
+
+
+@app.route("/teacherdata")
+def teacherdata():
+    q = "select * from teacher"
+    cur.execute(q)
+    data = cur.fetchall()
+    return render_template("admin_teacherdata.html", data=data)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',debug=True)

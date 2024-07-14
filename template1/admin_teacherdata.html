@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Data</title>
+</head>
+<style>
+    p{
+        text-align: center;
+        font-size: 50px;
+    }
+    table,th,td{
+        border: 1px solid black;
+        margin-left: 10%;
+        margin-top: 100px;
+        table-layout: auto;
+    }
+    td{
+        padding: 7px 65px;       
+        font-size: 20px;
+        text-align: center;
+    }
+    .forstart{
+        color: transparent;
+    }
+    .forend{
+        color: transparent;
+    }
+    @media screen and (max-width:450px){
+        table,th,td{
+          border: 1px solid black;
+          margin-left: 2%;
+          margin-top: 30%;
+        }
+        td{
+          padding: 5px 10px;
+          font-size: 10px;
+          text-align: center;
+        }
+        p{
+          font-size: xx-large;
+        }
+
+    }
+    
+</style>
+<body>
+    <p>Teacher Data</p>
+    <div class="biodata"></div>
+        <table >
+                <tr>
+                    <td>Teacher ID</td>
+                    <td>Name</td>
+                    <td>Class_teacher of</td>
+                    <td>Handling_classes</td>
+                </tr>
+            
+            <div class="forstart">{% for i in data %}</div>
+            <tr>
+                <td>{{i[0]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+                <td>{{i[4]}}</td>
+            </tr>
+            <div class="forend">
+            {% endfor%}
+            </div>
+        </table>
+    </div>
+</body>
+</html>
